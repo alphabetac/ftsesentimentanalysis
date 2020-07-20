@@ -14,16 +14,15 @@ tidy_reports <- function(file) {
     str_to_lower()
 
   # Company Name
-  without_date <- file %>%
-    str_remove("\\d\\d\\d\\d.pdf")
-  company_name <- gsub("_", " ", without_date)
+  without_pdf <- str_remove(file, ".pdf")
+  without_underscore <- gsub("_", " ", without_pdf)
 
   # Create dataset
   reports_dataset <<- reports_dataset %>%
     add_row(report_text = text,
-            company = company_name,
-            year = as.numeric(as.character(file %>%
-                                             str_extract("\\d\\d\\d\\d"))),
+            company = strsplit(without_underscore," ")[[1]][1],
+            industry = strsplit(without_underscore," ")[[1]][4],
+            year = as.numeric(as.character(strsplit(without_underscore, " ")[[1]][2])),
             n_page = get_n_pages(file),
             n_words = ntoken(text))
 }
