@@ -1,0 +1,20 @@
+Package: ftsesentimentanalysis
+Title: Processing and Analysing Company Reports
+Version: 0.0.0.9000
+Imports: tabulizer, rJava, stringr, dplyr
+Authors@R: 
+    person(given = "Henry",
+           family = "Johnston-Ellis",
+           email = "henry.johnston-ellis.18@ucl.ac.uk",
+           role = c("aut", "cre"))
+Description: This package is designed to take a series of pdfs, convert them 
+    to UTF-8 using the function from the tabulizer package and convert them 
+    into usable documents.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to
+    pick a license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
