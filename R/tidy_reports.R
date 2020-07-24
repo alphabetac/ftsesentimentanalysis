@@ -3,6 +3,15 @@
 #' This function converts a pdf to a UTF-8 string. It removes all digits and
 #' converts to lowercase. It then adds a row to a tibble with the name and
 #' date of each report.
+#' 
+#' Please note that the following packages must be loaded:
+#' - tabulizer
+#' - tidyverse
+#' - tidytext
+#' - quanteda
+#' 
+#' In addition, a dataframe with six variable (report_text, company, industry,
+#' year, n_page, n_words) must be created before the function is used.
 #'
 #' @param file List of files
 #' @export
