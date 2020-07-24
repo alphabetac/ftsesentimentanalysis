@@ -1,6 +1,6 @@
 Package: ftsesentimentanalysis
 Title: Processing and Analysing Company Reports
-Version: 1.0.0.0000
+Version: 1.0.0
 Imports: tabulizer, rJava, stringr, dplyr
 Authors@R: 
     person(given = "Henry",
