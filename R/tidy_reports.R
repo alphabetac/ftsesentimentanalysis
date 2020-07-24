@@ -13,7 +13,7 @@
 #' In addition, a dataframe with six variable (report_text, company, industry,
 #' year, n_page, n_words) must be created before the function is used.
 #'
-#' @param file List of files
+#' @param file PDF file of the form companyname_year_country_industry.pdf
 #' @export
 tidy_reports <- function(file) {
 
